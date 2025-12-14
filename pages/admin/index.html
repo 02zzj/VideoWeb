@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - 神影视频</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../../image/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 侧边栏导航 -->
+            <aside class="col-lg-2 col-md-3 admin-sidebar">
+                <div class="sidebar-header">
+                    <h3>神影视频管理</h3>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="fa fa-dashboard me-2"></i> 仪表盘
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="movies.html">
+                                <i class="fa fa-film me-2"></i> 电影管理
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-users me-2"></i> 用户管理
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-tags me-2"></i> 分类管理
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-comment-o me-2"></i> 评论管理
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-cog me-2"></i> 系统设置
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">
+                                <i class="fa fa-home me-2"></i> 返回前台
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link logout-btn" href="#">
+                                <i class="fa fa-sign-out me-2"></i> 退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <!-- 主内容区域 -->
+            <main class="col-lg-10 col-md-9 main-content">
+                <!-- 顶部导航栏 -->
+                <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                    <div class="container-fluid">
+                        <button class="sidebar-toggle btn btn-outline-primary me-2" type="button">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <h1 class="h5 mb-0">欢迎管理员</h1>
+                        <div class="dropdown ms-auto">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../../image/11.jpg" alt="管理员头像" width="30" height="30" class="rounded-circle me-1">
+                                管理员
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">个人中心</a></li>
+                                <li><a class="dropdown-item" href="#">修改密码</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item logout-btn" href="#">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- 统计数据 -->
+                <section class="container-fluid my-4 stats-container">
+                    <!-- 统计卡片将通过JavaScript动态生成 -->
+                </section>
+                
+                <!-- 最近更新的电影 -->
+                <section class="container-fluid my-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="h5 mb-0">最近更新的电影</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>海报</th>
+                                            <th>标题</th>
+                                            <th>导演</th>
+                                            <th>上映日期</th>
+                                            <th>评分</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recentMovies">
+                                        <!-- 电影数据将通过JavaScript动态生成 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="movies.html" class="btn btn-primary">查看全部电影</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="../../js/api.js"></script>
+    <script src="../../js/admin.js"></script>
+    <script>
+        // 加载最近更新的电影
+        async function loadRecentMovies() {
+            try {
+                const movies = await API.getMovies();
+                // 按创建时间排序，取最近5部
+                const recentMovies = movies.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 5);
+                
+                const tbody = document.getElementById('recentMovies');
+                tbody.innerHTML = '';
+                
+                recentMovies.forEach(movie => {
+                            const row = document.createElement('tr');
+                            // 修复图片路径
+                            const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+                            row.innerHTML = `
+                                <td>${movie.id}</td>
+                                <td><img src="${posterPath}" alt="${movie.title}" width="50" height="75" style="object-fit: cover;"></td>
+                                <td>${movie.title}</td>
+                                <td>${movie.director}</td>
+                                <td>${movie.release_date}</td>
+                                <td>★ ${movie.rating}</td>
+                                <td>
+                                    <a href="movies.html?id=${movie.id}" class="btn btn-sm btn-primary me-1">编辑</a>
+                                    <button class="btn btn-sm btn-danger">删除</button>
+                                </td>
+                            `;
+                            tbody.appendChild(row);
+                        });
+            } catch (error) {
+                console.error('Failed to load recent movies:', error);
+            }
+        }
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecentMovies();
+        });
+    </script>
+</body>
+</html>
