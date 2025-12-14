@@ -9,8 +9,8 @@
     "duration": 120,
     "rating": 8.5,
     "description": "这是一部关于神影传说的科幻动作电影，讲述了主人公在未来世界中与邪恶势力斗争的故事。",
-    "poster": "image/11.jpg",
-    "banner": "image/11.jpg",
+    "poster": "./image/11.jpg",
+    "banner": "./image/11.jpg",
     "created_at": "2023-01-01T00:00:00Z"
   },
   {
@@ -23,8 +23,8 @@
     "duration": 110,
     "rating": 7.9,
     "description": "这是一部经典的喜剧电影，讲述了一个小人物追逐梦想成为喜剧之王的故事。",
-    "poster": "image/02.png",
-    "banner": "image/02.png",
+    "poster": "./image/02.png",
+    "banner": "./image/02.png",
     "created_at": "2023-02-01T00:00:00Z"
   },
   {
@@ -37,8 +37,8 @@
     "duration": 105,
     "rating": 8.2,
     "description": "这是一部爱情喜剧电影，讲述了一群年轻人在公寓中发生的搞笑爱情故事。",
-    "poster": "image/03.png",
-    "banner": "image/03.png",
+    "poster": "./image/03.png",
+    "banner": "./image/03.png",
     "created_at": "2023-03-01T00:00:00Z"
   },
   {
@@ -51,8 +51,8 @@
     "duration": 140,
     "rating": 9.1,
     "description": "这是一部科幻巨制，讲述了人类为了寻找新家园而进行星际穿越的故事。",
-    "poster": "image/04.png",
-    "banner": "image/04.png",
+    "poster": "./image/04.png",
+    "banner": "./image/04.png",
     "created_at": "2023-04-01T00:00:00Z"
   },
   {
@@ -65,8 +65,8 @@
     "duration": 115,
     "rating": 8.7,
     "description": "这是一部悬疑推理电影，讲述了侦探破解一系列离奇案件的故事。",
-    "poster": "image/05.png",
-    "banner": "image/05.png",
+    "poster": "./image/05.png",
+    "banner": "./image/05.png",
     "created_at": "2023-05-01T00:00:00Z"
   },
   {
@@ -79,8 +79,8 @@
     "duration": 100,
     "rating": 7.5,
     "description": "这是一部恐怖电影，讲述了一群年轻人在夜晚遇到的恐怖事件。",
-    "poster": "image/06.png",
-    "banner": "image/06.png",
+    "poster": "./image/06.png",
+    "banner": "./image/06.png",
     "created_at": "2023-06-01T00:00:00Z"
   },
   {
@@ -93,8 +93,8 @@
     "duration": 95,
     "rating": 8.3,
     "description": "这是一部动画电影，讲述了一个充满想象力的动画世界冒险故事。",
-    "poster": "image/07.png",
-    "banner": "image/07.png",
+    "poster": "./image/07.png",
+    "banner": "./image/07.png",
     "created_at": "2023-07-01T00:00:00Z"
   },
   {
@@ -107,8 +107,8 @@
     "duration": 130,
     "rating": 8.6,
     "description": "这是一部剧情电影，讲述了普通人的不平凡人生故事。",
-    "poster": "image/08.png",
-    "banner": "image/08.png",
+    "poster": "./image/08.png",
+    "banner": "./image/08.png",
     "created_at": "2023-08-01T00:00:00Z"
   },
   {
@@ -121,8 +121,8 @@
     "duration": 125,
     "rating": 8.0,
     "description": "这是一部动作电影，讲述了英雄拯救世界的故事。",
-    "poster": "image/09.png",
-    "banner": "image/09.png",
+    "poster": "./image/09.png",
+    "banner": "./image/09.png",
     "created_at": "2023-09-01T00:00:00Z"
   },
   {
@@ -135,8 +135,8 @@
     "duration": 135,
     "rating": 8.8,
     "description": "这是一部科幻动作电影，讲述了未来战士与机器人对抗的故事。",
-    "poster": "image/10.jpg",
-    "banner": "image/10.jpg",
+    "poster": "./image/10.jpg",
+    "banner": "./image/10.jpg",
     "created_at": "2023-10-01T00:00:00Z"
   }
 ]
