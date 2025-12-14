@@ -152,7 +152,7 @@
                 recentMovies.forEach(movie => {
                             const row = document.createElement('tr');
                             // 修复图片路径
-                            const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+                            const posterPath = movie.poster.startsWith('/') ? movie.poster : `./../.${movie.poster}`;
                             row.innerHTML = `
                                 <td>${movie.id}</td>
                                 <td><img src="${posterPath}" alt="${movie.title}" width="50" height="75" style="object-fit: cover;"></td>

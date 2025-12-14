@@ -191,7 +191,7 @@ function displayMovieTable(movies, categories, tableBody) {
         }).filter(Boolean).join(', ');
         
         // 修复图片路径
-        const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+        const posterPath = movie.poster.startsWith('/') ? movie.poster : `./../.${movie.poster}`;
         
         row.innerHTML = `
             <td>${movie.id}</td>
