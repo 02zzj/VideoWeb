@@ -294,7 +294,7 @@ async function displayMovieDetail() {
                 }).filter(Boolean).join(', ');
                 
                 // 修复图片路径
-                const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+                const posterPath = movie.poster.startsWith('/') ? movie.poster : `./.${movie.poster}`;
                 
                 detailContainer.innerHTML = `
                     <div class="row align-items-center">
