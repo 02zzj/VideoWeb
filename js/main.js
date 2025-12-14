@@ -68,7 +68,7 @@ async function displayMovies(movies, container) {
             card.className = 'col-lg-3 col-md-4 col-sm-6 mb-4';
             
             // 修复图片路径
-            const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+            const posterPath = movie.poster.startsWith('./') ? movie.poster : `./${movie.poster}`;
             
             // 获取电影分类名称
             const movieCategories = movie.category.map(catId => {
