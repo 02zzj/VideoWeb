@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "admin",
+    "avatar": "image/11.jpg",
+    "created_at": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": 2,
+    "username": "user1",
+    "email": "user1@example.com",
+    "password": "user123",
+    "role": "user",
+    "avatar": "image/12.jpg",
+    "created_at": "2023-01-02T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "username": "user2",
+    "email": "user2@example.com",
+    "password": "user123",
+    "role": "user",
+    "avatar": "image/13.jpg",
+    "created_at": "2023-01-03T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "username": "movie_lover",
+    "email": "lover@example.com",
+    "password": "lover123",
+    "role": "user",
+    "avatar": "image/11.jpg",
+    "created_at": "2023-01-04T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "username": "film_critic",
+    "email": "critic@example.com",
+    "password": "critic123",
+    "role": "user",
+    "avatar": "image/12.jpg",
+    "created_at": "2023-01-05T00:00:00Z"
+  }
+]

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神影视频 - 最新最热电影在线观看</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="image/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logo.svg" alt="神影视频" width="30" height="30" class="d-inline-block align-top">
+                神影视频
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            电影分类
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="all">全部</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="1">动作</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="2">喜剧</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="3">爱情</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="4">科幻</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="5">悬疑</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="6">恐怖</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="7">动画</a></li>
+                            <li><a class="dropdown-item category-link" href="#" data-category-id="8">剧情</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">热门电影</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">最新上映</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">即将上映</a>
+                    </li>
+                </ul>
+                
+                <!-- 搜索框 -->
+                <form class="d-flex me-3" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="搜索电影、导演、演员..." aria-label="Search" id="searchInput">
+                    <button class="btn btn-secondary" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                <!-- 登录/注册按钮 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="pages/login.html">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link register-btn" href="pages/register.html">注册</a>
+                    </li>
+                    <li class="nav-item user-menu" style="display: none;">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./image/01.png" alt="用户头像" width="30" height="30" class="rounded-circle me-1" id="userAvatar">
+                                <span class="username"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">个人中心</a></li>
+                                <li><a class="dropdown-item" href="#">我的收藏</a></li>
+                                <li><a class="dropdown-item" href="#">观看历史</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item logout-btn" href="#">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 56px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('image/12.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>神影传说</h2>
+                    <p>这是一部关于神影传说的科幻动作电影，讲述了主人公在未来世界中与邪恶势力斗争的故事。</p>
+                    <a href="pages/movie-detail.html?id=1" class="btn btn-primary btn-lg">立即观看</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('image/11.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>星际穿越</h2>
+                    <p>这是一部科幻巨制，讲述了人类为了寻找新家园而进行星际穿越的故事。</p>
+                    <a href="pages/movie-detail.html?id=4" class="btn btn-primary btn-lg">立即观看</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('image/10.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>未来战士</h2>
+                    <p>这是一部科幻动作电影，讲述了未来战士与机器人对抗的故事。</p>
+                    <a href="pages/movie-detail.html?id=10" class="btn btn-primary btn-lg">立即观看</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 电影分类导航 -->
+    <section class="container my-5">
+        <h2 class="mb-4">电影分类</h2>
+        <div class="row g-3">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="all">全部电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="1">动作电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="2">喜剧电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="3">爱情电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="4">科幻电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="5">悬疑电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="6">恐怖电影</a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="category-link btn btn-outline-primary btn-lg w-100" data-category-id="7">动画电影</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门电影 -->
+    <section class="container my-5">
+        <h2 class="mb-4">热门电影</h2>
+        <div class="row movie-grid">
+            <!-- 电影卡片将通过JavaScript动态生成 -->
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>关于我们</h5>
+                    <p>神影视频是一个专业的在线视频平台，提供最新最热的电影、电视剧等视频内容。我们致力于为用户提供优质的观影体验。</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>联系方式</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o"></i> contact@example.com</li>
+                        <li><i class="fa fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fa fa-map-marker"></i> 北京市朝阳区某某街道123号</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>关注我们</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-weixin"></i> 微信</a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-weibo"></i> 微博</a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-qq"></i> QQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>&copy; 2023 神影视频. All rights reserved. 作者：神影团队</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 检查登录状态
+        checkLoginStatus();
+    </script>
+</body>
+</html>

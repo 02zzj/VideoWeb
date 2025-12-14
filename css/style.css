@@ -1,0 +1,347 @@
+/* 全局样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #1a237e;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff9800;
+}
+
+/* 轮播图样式 */
+.carousel-item {
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* 电影卡片样式 */
+.movie-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.movie-card .card-body {
+    padding: 1.5rem;
+}
+
+.movie-rating {
+    color: #ff9800;
+    font-weight: 700;
+}
+
+.movie-category {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: #1a237e;
+    border-color: #1a237e;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #283593;
+    border-color: #283593;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #ff9800;
+    border-color: #ff9800;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #f57c00;
+    border-color: #f57c00;
+    transform: translateY(-1px);
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #1a237e;
+    color: #ffffff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer h5 {
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff9800;
+}
+
+/* 表单样式 */
+.form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #555555;
+}
+
+.form-control:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 0 0.2rem rgba(26, 35, 126, 0.25);
+}
+
+/* 电影详情页样式 */
+.movie-detail {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.movie-detail img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info {
+    margin-top: 2rem;
+}
+
+.movie-info h2 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+}
+
+.movie-meta {
+    margin-bottom: 1.5rem;
+}
+
+.movie-meta span {
+    margin-right: 1.5rem;
+    color: #666666;
+}
+
+.movie-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* 评论样式 */
+.comments-section {
+    margin-top: 3rem;
+}
+
+.comment {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.comment-date {
+    font-size: 0.875rem;
+    color: #666666;
+    margin-left: 1rem;
+}
+
+/* 后台管理样式 */
+.admin-sidebar {
+    background-color: #1a237e;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.admin-sidebar h3 {
+    color: #ff9800;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.admin-sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar a:hover {
+    background-color: #283593;
+    color: #ff9800;
+}
+
+.admin-content {
+    padding: 2rem;
+}
+
+.admin-content h2 {
+    color: #1a237e;
+    margin-bottom: 2rem;
+}
+
+/* 统计卡片样式 */
+.stats-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card h3 {
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card .stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff9800;
+}
+
+/* 表格样式 */
+.table-container {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: #1a237e;
+    color: #ffffff;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* 模态框样式 */
+.modal-header {
+    background-color: #1a237e;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    border: none;
+}
+
+.modal-title {
+    color: #ffffff;
+}
+
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .movie-card img {
+        height: 250px;
+    }
+    
+    .admin-sidebar {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+    
+    .admin-content {
+        padding: 1rem;
+    }
+}
