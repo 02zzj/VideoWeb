@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影详情 - 神影视频</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../image/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../image/logo.svg" alt="神影视频" width="30" height="30" class="d-inline-block align-top">
+                神影视频
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            电影分类
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html">全部</a></li>
+                            <li><a class="dropdown-item" href="../index.html">动作</a></li>
+                            <li><a class="dropdown-item" href="../index.html">喜剧</a></li>
+                            <li><a class="dropdown-item" href="../index.html">爱情</a></li>
+                            <li><a class="dropdown-item" href="../index.html">科幻</a></li>
+                            <li><a class="dropdown-item" href="../index.html">悬疑</a></li>
+                            <li><a class="dropdown-item" href="../index.html">恐怖</a></li>
+                            <li><a class="dropdown-item" href="../index.html">动画</a></li>
+                            <li><a class="dropdown-item" href="../index.html">剧情</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">热门电影</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">最新上映</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">即将上映</a>
+                    </li>
+                </ul>
+                
+                <!-- 搜索框 -->
+                <form class="d-flex me-3" action="../index.html">
+                    <input class="form-control me-2" type="search" placeholder="搜索电影、导演、演员..." aria-label="Search" name="search">
+                    <button class="btn btn-secondary" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                <!-- 登录/注册按钮 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="login.html">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link register-btn" href="register.html">注册</a>
+                    </li>
+                    <li class="nav-item user-menu" style="display: none;">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../image/01.png" alt="用户头像" width="30" height="30" class="rounded-circle me-1" id="userAvatar">
+                                <span class="username"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">个人中心</a></li>
+                                <li><a class="dropdown-item" href="#">我的收藏</a></li>
+                                <li><a class="dropdown-item" href="#">观看历史</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item logout-btn" href="#">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 电影详情 -->
+    <main class="container mt-5 pt-5">
+        <div class="movie-detail">
+            <!-- 电影信息将通过JavaScript动态生成 -->
+        </div>
+
+        <!-- 评论区 -->
+        <div class="comments-section mt-5">
+            <h3>用户评论</h3>
+            
+            <!-- 评论表单 -->
+            <div class="comment-form mb-5">
+                <h4>发表评论</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="commentContent" class="form-label">评论内容</label>
+                        <textarea class="form-control" id="commentContent" rows="3" required></textarea>
+                        <div class="invalid-feedback">
+                            请输入评论内容
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">发表评论</button>
+                </form>
+            </div>
+
+            <!-- 评论列表 -->
+            <div class="comments-list">
+                <h4>全部评论</h4>
+                <div class="comment">
+                    <div class="comment-header mb-2">
+                        <span class="comment-author">用户1</span>
+                        <span class="comment-date">2023-01-15 14:30</span>
+                    </div>
+                    <div class="comment-content">
+                        这部电影非常好看，剧情紧凑，特效很棒，推荐大家观看！
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-header mb-2">
+                        <span class="comment-author">用户2</span>
+                        <span class="comment-date">2023-01-16 10:20</span>
+                    </div>
+                    <div class="comment-content">
+                        演员的表演非常出色，特别是主角的演技，让人印象深刻。
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-header mb-2">
+                        <span class="comment-author">用户3</span>
+                        <span class="comment-date">2023-01-17 16:45</span>
+                    </div>
+                    <div class="comment-content">
+                        剧情有点老套，但特效和音效都很棒，整体还是值得一看的。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 相关推荐 -->
+        <section class="container my-5">
+            <h2 class="mb-4">相关推荐</h2>
+            <div class="row movie-grid">
+                <!-- 相关电影将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>关于我们</h5>
+                    <p>神影视频是一个专业的在线视频平台，提供最新最热的电影、电视剧等视频内容。我们致力于为用户提供优质的观影体验。</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>联系方式</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o"></i> contact@example.com</li>
+                        <li><i class="fa fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fa fa-map-marker"></i> 北京市朝阳区某某街道123号</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>关注我们</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-weixin"></i> 微信</a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-weibo"></i> 微博</a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fa fa-qq"></i> QQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>&copy; 2023 神影视频. All rights reserved. 作者：神影团队</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="../js/api.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // 检查登录状态
+        checkLoginStatus();
+        
+        // 初始化电影详情
+        initMovieDetail();
+        
+        // 加载相关推荐电影
+        async function loadRelatedMovies() {
+            try {
+                console.log('开始加载相关推荐电影...');
+                const movies = await API.getMovies();
+                console.log('获取到的电影总数:', movies.length);
+                
+                const urlParams = new URLSearchParams(window.location.search);
+                const currentMovieId = parseInt(urlParams.get('id'));
+                console.log('当前电影ID:', currentMovieId);
+                
+                // 排除当前电影，随机选择3部电影作为推荐
+                const relatedMovies = movies.filter(movie => movie.id !== currentMovieId)
+                                         .sort(() => 0.5 - Math.random())
+                                         .slice(0, 3);
+                
+                console.log('推荐电影数量:', relatedMovies.length);
+                console.log('推荐电影:', relatedMovies);
+                
+                const movieGrid = document.querySelector('.movie-grid');
+                console.log('找到的电影网格元素:', movieGrid);
+                
+                if (movieGrid) {
+                    // 清空现有内容
+                    movieGrid.innerHTML = '';
+                    
+                    // 获取分类数据（只获取一次）
+                    const categories = await API.getCategories();
+                    
+                    // 使用for...of循环处理异步操作
+                    for (const movie of relatedMovies) {
+                        const movieCard = document.createElement('div');
+                        movieCard.className = 'col-lg-4 col-md-6 mb-4';
+                        
+                        // 修复图片路径
+                        const posterPath = movie.poster.startsWith('/') ? movie.poster : `/${movie.poster}`;
+                        
+                        // 获取电影分类名称
+                        const movieCategories = movie.category.map(catId => {
+                            const category = categories.find(c => c.id === catId);
+                            return category ? category.name : '未知';
+                        });
+                        
+                        movieCard.innerHTML = `
+                            <div class="card movie-card h-100 d-flex flex-column">
+                                <img src="${posterPath}" class="card-img-top" alt="${movie.title}">
+                                <div class="card-body flex-grow-1 d-flex flex-column">
+                                    <h5 class="card-title" style="min-height: 50px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${movie.title}</h5>
+                                    <div class="movie-rating">★ ${movie.rating}</div>
+                                    <div class="movie-meta mb-3">
+                                        <span>${movie.release_date}</span>
+                                        <span>${movie.duration} 分钟</span>
+                                    </div>
+                                    <div class="movie-categories mb-3 flex-grow-1">
+                                        ${movieCategories.map(catName => `<span class="movie-category">${catName}</span>`).join('')}
+                                    </div>
+                                    <a href="movie-detail.html?id=${movie.id}" class="btn btn-primary w-100 mt-auto">查看详情</a>
+                                </div>
+                            </div>
+                        `;
+                        
+                        movieGrid.appendChild(movieCard);
+                    }
+                    
+                    console.log('推荐电影卡片添加完成');
+                }
+            } catch (error) {
+                console.error('Failed to load related movies:', error);
+                alert('加载相关推荐电影失败：' + error.message);
+            }
+        }
+        
+        // 加载相关推荐电影
+        loadRelatedMovies();
+    </script>
+</body>
+</html>
